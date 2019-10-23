@@ -52,7 +52,7 @@ if __name__ == '__main__':
    for n in range(2):
 
        result_table = driver.find_elements_by_class_name("re_disp")
-       tbody = driver.find_element_by_xpath("//*[@id='container_cont']/table/tbody")
+       tbody = driver.find_element_by_xpath("//*[@id='contain er_cont']/table/tbody")
        trs = tbody.find_elements_by_tag_name("tr")
 
        for i in range(1,len(trs)):
