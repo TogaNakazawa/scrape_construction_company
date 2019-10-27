@@ -86,6 +86,8 @@ if __name__ == '__main__':
                     error += 1
                     time.sleep(5)
                     if error >= 10:
+                        df = pd.DataFrame(data_all, index=list(range(1,len(data_all) + 1)), columns=["No.","許可行政庁","許可番号","商号又は名称","代表者名","営業所名","所在地","電話番号","許可の有効期間"])
+                        df.to_excel('/Users/nakazawatoga/Desktop/scrape_construction_company/test1.xlsx', sheet_name='test1', index = False)
                         break
                     print("error :" + str(error))
                     pass
@@ -95,6 +97,10 @@ if __name__ == '__main__':
             except:
                 error += 1
                 time.sleep(5)
+                if error >= 10:
+                    df = pd.DataFrame(data_all, index=list(range(1,len(data_all) + 1)), columns=["No.","許可行政庁","許可番号","商号又は名称","代表者名","営業所名","所在地","電話番号","許可の有効期間"])
+                    df.to_excel('/Users/nakazawatoga/Desktop/scrape_construction_company/test1.xlsx', sheet_name='test1', index = False)
+                    break
                 print("error :" + str(error))
                 pass
 
